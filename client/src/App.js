@@ -12,7 +12,6 @@ function App() {
   const [query, setQuery] = useState("");
 
   useEffect(() => {
-    //console.log("Effect has been run");
     getRecipes();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
@@ -26,12 +25,12 @@ function App() {
     //  console.log(data.hits);
   };
 
-  const updateSearch = e => {
+  const updateSearch = (e) => {
     setSearch(e.target.value);
     // console.log(search);
   };
 
-  const getSearch = e => {
+  const getSearch = (e) => {
     e.preventDefault();
     setQuery(search);
     setSearch("");
@@ -60,13 +59,13 @@ function App() {
               onChange={updateSearch}
             />
             <button className="btn btn-primary btn-block mt-2" type="submit">
-              Seacrh
+              Search
             </button>
           </form>
         </div>
         <br />
         <div className="recipes">
-          {recipes.map(recipe => (
+          {recipes.map((recipe) => (
             <Recipe
               key={recipe.recipe.label}
               title={recipe.recipe.label}

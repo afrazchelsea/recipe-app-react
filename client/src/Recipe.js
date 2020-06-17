@@ -4,14 +4,19 @@ import style from "./recipe.module.css";
 export const Recipe = ({ title, calories, image, ingredients }) => {
   return (
     <div className={style.recipe}>
-      <h1>{title}</h1>
-      <img className={style.image} src={image} alt="" />
-      <ol>
-        {ingredients.map(ingredient => (
-          <li>{ingredient.text}</li>
-        ))}
-      </ol>
-      <p>{calories}</p>
+      <h3>{title}</h3>
+      <div className={style.inside}>
+        <img className={style.image} src={image} alt="" />
+        <ol className={style.ingredient}>
+          {ingredients.map((ingredient) => (
+            <li>{ingredient.text}</li>
+          ))}
+        </ol>
+      </div>
+
+      <h4 className={style.calories}>
+        Calories : {Math.floor(calories)} / serving
+      </h4>
     </div>
   );
 };
