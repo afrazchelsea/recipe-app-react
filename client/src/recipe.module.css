@@ -8,6 +8,7 @@
   background: grey;
   align-items: center;
 }
+
 .inside {
   display: flex;
   align-items: center;
@@ -32,6 +33,7 @@
 .calories {
   margin-top: 25px;
   color: black;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
