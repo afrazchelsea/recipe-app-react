@@ -40,7 +40,8 @@
   }
 
   .recipe {
-    max-width: 90%;
+    margin: 20px 0;
+    max-width: 95%;
   }
 
   .image {
